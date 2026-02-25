@@ -1,0 +1,78 @@
+.about-section {
+  padding: 80px 10%;
+  background-color: #222831; /* Primary Background */
+  color: #EEEEEE;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Makes it responsive (stacks on mobile) */
+}
+
+/* Image Placeholder Styling */
+.about-visual, .about-info {
+  flex: 1; /* Both sides take equal space */
+  min-width: 300px;
+}
+
+.placeholder-box {
+  height: 400px;
+  background-color: #393E46; /* Secondary Background */
+  border: 2px dashed #00ADB5; /* Teal Accent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: #00ADB5;
+}
+
+/* Text & Headings */
+h2 span {
+  color: #00ADB5; /* Teal Accent for the word "Me" */
+}
+
+p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+/* The Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.stat-item {
+  background-color: #393E46;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.stat-item h3 {
+  color: #00ADB5;
+  margin-bottom: 5px;
+}
+
+/* Button Styling */
+.about-btn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 2px solid #00ADB5;
+  color: #00ADB5;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.about-btn:hover {
+  background-color: #00ADB5;
+  color: #222831;
+}

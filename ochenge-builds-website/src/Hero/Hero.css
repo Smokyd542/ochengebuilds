@@ -1,0 +1,166 @@
+.hero-section {
+  min-height: 100vh;
+  background-color: #222831;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%; /* Reduced side padding to allow more spread */
+  overflow: hidden;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1400px; /* Wider container for better spacing */
+  display: grid;
+  /* Sidebar takes its own space, then text and visual share the rest */
+  grid-template-columns: auto 1fr 1fr; 
+  align-items: center;
+  /* 'vw' units for gap make the space feel consistent on all desktops */
+  gap: 8vw; 
+}
+
+/* Social Sidebar (Far Left) */
+.social-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.social-sidebar a {
+  color: #EEEEEE;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.social-sidebar a:hover {
+  color: #00ADB5;
+}
+
+.sidebar-line {
+  width: 2px;
+  height: 80px;
+  background-color: #00ADB5;
+}
+
+/* Hero Text (Middle-Left) */
+.hero-text {
+  text-align: left;
+}
+
+.intro-tag {
+  color: #00ADB5;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem); /* Scales font based on screen size */
+  color: #EEEEEE;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #00ADB5;
+}
+
+.hero-desc {
+  color: #b0b0b0;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+/* 3D Visual Area (Far Right) */
+.hero-visual {
+  display: flex;
+  justify-content: flex-end; /* Pushes the placeholder to the absolute right */
+  width: 100%;
+}
+
+.hero-3d-placeholder {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1; /* Keeps it a perfect square */
+  background-color: #393E46;
+  border-radius: 30px;
+  border: 2px dashed #00ADB5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #00ADB5;
+  animation: floating 6s ease-in-out infinite;
+}
+
+.hero-blob {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0,173,181,0.15) 0%, transparent 70%);
+  z-index: -1;
+}
+
+/* Shared Components Styles */
+.btn-main {
+  background-color: #00ADB5;
+  color: #222831;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-sub {
+  background: transparent;
+  color: #00ADB5;
+  border: 2px solid #00ADB5;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+}
+
+/* RESPONSIVE: Stack them when screen is too small for wide spacing */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .social-sidebar {
+    display: none;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .hero-3d-placeholder {
+    max-width: 400px;
+  }
+}

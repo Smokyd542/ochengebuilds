@@ -1,0 +1,76 @@
+.skills-section {
+  padding: 80px 10%;
+  background-color: #222831; /* Primary Dark */
+  text-align: center;
+}
+
+.skills-header h2 span {
+  color: #00ADB5; /* Teal Highlight */
+}
+
+/* The Grid System */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background-color: #393E46; /* Deep Grey Card */
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 173, 181, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Hover Effect: Makes the card look like it "pops" forward (3D Effect) */
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: #00ADB5;
+  box-shadow: 0 10px 20px rgba(0, 173, 181, 0.2);
+}
+
+.skill-icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: #222831;
+  color: #00ADB5;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.skill-card h3 {
+  color: #EEEEEE;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Progress Bar Styling */
+.progress-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #222831;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #00ADB5; /* Teal fill */
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.level-text {
+  font-size: 0.8rem;
+  color: #888;
+}
