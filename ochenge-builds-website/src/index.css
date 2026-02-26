@@ -8,6 +8,11 @@
 * {
   box-sizing: border-box; /* Ensures padding doesn't add to width */
 }
+html {
+  scroll-behavior: smooth;
+  /* This prevents the header from covering the section title */
+  scroll-padding-top: 90px; 
+}
 
 html, body {
   background-color: var(--bg-primary);
@@ -19,4 +24,24 @@ html, body {
   overflow-x: hidden; /* This stops the horizontal sliding */
   margin: 0;
   padding: 0;
+}
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  html, body {
+    font-size: 95%; /* Everything shrinks slightly */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 90%; /* Everything shrinks further */
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  html, body {
+    font-size: 85%; 
+  }
 }

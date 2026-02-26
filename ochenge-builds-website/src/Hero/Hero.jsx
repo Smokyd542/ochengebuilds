@@ -28,8 +28,10 @@ const Hero = () => {
           </p>
           
           <div className="hero-btns">
+
             <button className="btn-main">Download CV <FontAwesomeIcon icon={faDownload} /></button>
-            <button className="btn-sub">Let's Talk <FontAwesomeIcon icon={faEnvelope} /></button>
+
+             <a href="#contact"><button className="btn-sub">Let's Talk <FontAwesomeIcon icon={faEnvelope} /></button></a>
           </div>
         </div>
 

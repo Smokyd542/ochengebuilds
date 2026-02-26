@@ -4,7 +4,7 @@ import { assets } from '../assets';
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id="about">
       <div className="about-wrapper">
         
         {/* --- LEFT SIDE: IMAGE AREA --- */}
@@ -22,8 +22,9 @@ const About = () => {
           <h2>About <span>Me</span></h2>
           
           <p>
-            I am a developer who loves building things for the web. 
-            I focus on making designs feel modern and interactive.
+           Hello! I'm Henry, a Web Developer dedicated to building functional, scalable, and visually stunning applications. My journey in tech is driven by a simple philosophy: Code should be as beautiful as it is efficient.
+
+With a strong foundation in Frontend Development, I specialize in transforming static designs into dynamic, responsive realities. I thrive in the intersection of logic and creativity, ensuring that every project I touch is optimized for speed, SEO, and, most importantly, the user.
           </p>
 
           {/* This is the 3-column grid for your stats */}
@@ -40,7 +41,7 @@ const About = () => {
             </div>
 
             <div className="stat-item">
-              <h3>100+</h3>
+              <h3>30+</h3>
               <p>Projects</p>
             </div>
 

@@ -1,0 +1,84 @@
+.socials-section {
+  padding: 80px 10%;
+  background-color: #222831;
+  text-align: center;
+}
+
+.socials-header h2 {
+  font-size: 2.5rem;
+  color: #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.socials-header h2 span {
+  color: #00ADB5;
+}
+
+.socials-header p {
+  color: #b0b0b0;
+  margin-bottom: 50px;
+}
+
+.socials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-card {
+  background: rgba(57, 62, 70, 0.5); /* #393E46 with transparency */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(238, 238, 238, 0.1);
+  padding: 30px;
+  width: 160px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon-box {
+  font-size: 2.5rem;
+  color: #EEEEEE;
+  transition: 0.3s;
+}
+
+.social-card span {
+  color: #EEEEEE;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* 3D Hover Effect */
+.social-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  background: rgba(57, 62, 70, 0.8);
+  border-color: var(--hover-clr);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px var(--hover-clr); /* Brand color glow */
+}
+
+.social-card:hover .social-icon-box {
+  color: var(--hover-clr);
+  transform: scale(1.1);
+}
+
+/* 📱 Mobile Scaling */
+@media (max-width: 768px) {
+  .social-card {
+    width: 130px;
+    padding: 20px;
+  }
+  
+  .social-icon-box {
+    font-size: 2rem;
+  }
+}

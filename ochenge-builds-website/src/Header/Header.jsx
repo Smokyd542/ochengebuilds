@@ -33,7 +33,9 @@ const Header = () => {
             <FontAwesomeIcon icon={faMoon} />
           </button>
           
-          <button className="hire-btn">Hire Me</button>
+
+          <a href="#contact"><button className="hire-btn">Hire Me</button></a>
+          
 
           {/* Hamburger Menu Icon */}
           <button className="menu-toggle" onClick={toggleMenu}>

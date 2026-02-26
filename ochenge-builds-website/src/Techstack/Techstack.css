@@ -1,0 +1,96 @@
+.tech-section {
+  background-color: #222831;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.tech-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tech-title h5 {
+  color: #00ADB5;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.tech-title h2 {
+  font-size: 2rem;
+  color: #EEEEEE;
+}
+
+.tech-title h2 span {
+  color: #00ADB5;
+}
+
+/* MARQUEE ENGINE */
+.marquee {
+  display: flex;
+  width: 100%;
+  /* Creates a fade effect on left and right edges */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  animation: scroll 30s linear infinite;
+}
+
+.tech-card {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  background: rgba(57, 62, 70, 0.5);
+  border: 1px solid rgba(0, 173, 181, 0.2);
+  border-radius: 50px; /* Capsule shape */
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-icon {
+  font-size: 1.8rem;
+  color: var(--clr);
+  filter: drop-shadow(0 0 5px var(--clr));
+}
+
+.tech-card span {
+  color: #EEEEEE;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 3D Hover Effect */
+.tech-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: #393E46;
+  border-color: var(--clr);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.marquee:hover .marquee-content {
+  animation-play-state: paused; /* Pause on hover to let users look */
+}
+
+/* Animation Loop */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+  .marquee-content {
+    gap: 15px;
+    animation: scroll 20s linear infinite;
+  }
+  .tech-card {
+    padding: 10px 20px;
+  }
+}

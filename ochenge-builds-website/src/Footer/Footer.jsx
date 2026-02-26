@@ -15,13 +15,13 @@ const Footer = () => {
         <div className="footer-cta">
           <p>Have a project in mind?</p>
           <h2 className="big-text">Let's <span>Connect.</span></h2>
-          <a href="mailto:yourname@email.com" className="footer-email">henry@oualicode.com</a>
+          <a href="mailto:ochengehenry26@gmail.com" className="footer-email">ochengehenry26@gmail.com</a>
         </div>
 
         <div className="footer-bottom-grid">
           {/* Copyright Area */}
           <div className="footer-copy">
-            <p>© {new Date().getFullYear()} OualiCode</p>
+            <p>© {new Date().getFullYear()}HenryOchenge</p>
             <p>Designed with 3D Passion</p>
           </div>
 
