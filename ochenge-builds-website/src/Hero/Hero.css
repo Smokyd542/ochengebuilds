@@ -17,7 +17,9 @@
   align-items: center;
   /* 'vw' units for gap make the space feel consistent on all desktops */
   gap: 8vw; 
+  padding-top: 80px; /* Adjust this to match your header's height */
 }
+
 
 /* Social Sidebar (Far Left) */
 .social-sidebar {
@@ -91,24 +93,33 @@
 .hero-3d-placeholder {
   width: 100%;
   max-width: 500px;
-  aspect-ratio: 1 / 1; /* Keeps it a perfect square */
-  background-color: #393E46;
-  border-radius: 30px;
-  border: 2px dashed #00ADB5;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #00ADB5;
+  /* Removed background-color and dashed border to let the character float */
   animation: floating 6s ease-in-out infinite;
+}
+.hero-3d-placeholder img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures the whole image fits without stretching */
+  z-index: 2;
+  /* Optional: adds a slight drop shadow to make the character pop from the background */
+  filter: drop-shadow(0 20px 50px rgba(0, 173, 181, 0.3));
+  border-radius: 10px;
 }
 
 .hero-blob {
   position: absolute;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(0,173,181,0.15) 0%, transparent 70%);
-  z-index: -1;
+  width: 100%; /* Sized slightly smaller than the container for a better glow effect */
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 173, 181, 0.2) 0%, transparent 70%);
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Shared Components Styles */
@@ -161,6 +172,7 @@
   }
 
   .hero-3d-placeholder {
-    max-width: 400px;
+    max-width: 350px; /* Slightly smaller for mobile screens */
+    margin: 0 auto;
   }
 }

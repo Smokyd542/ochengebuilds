@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import { assets } from '../assets';
 
 const About = () => {
   return (
@@ -8,11 +9,12 @@ const About = () => {
         
         {/* --- LEFT SIDE: IMAGE AREA --- */}
         <div className="about-visual">
-          {/* This is a placeholder for your 3D character image */}
-          <div className="placeholder-box">
-             3D Character Image (Add later)
-          </div>
-        </div>
+  <div className="image-card">
+    <img src={assets.images.meProfile} alt="Henry Profile" className="profile-img" />
+  </div>
+  {/* The blob provides that 3D glow behind your photo */}
+  <div className="about-blob"></div>
+</div>
 
         {/* --- RIGHT SIDE: CONTENT AREA --- */}
         <div className="about-info">

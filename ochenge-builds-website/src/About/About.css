@@ -1,78 +1,135 @@
 .about-section {
-  padding: 80px 10%;
-  background-color: #222831; /* Primary Background */
+  padding: 100px 10%;
+  background-color: #222831;
   color: #EEEEEE;
 }
 
 .about-wrapper {
-  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Image side slightly smaller than text side */
+  gap: 80px;
   align-items: center;
-  gap: 50px;
-  flex-wrap: wrap; /* Makes it responsive (stacks on mobile) */
 }
 
-/* Image Placeholder Styling */
-.about-visual, .about-info {
-  flex: 1; /* Both sides take equal space */
-  min-width: 300px;
-}
-
-.placeholder-box {
-  height: 400px;
-  background-color: #393E46; /* Secondary Background */
-  border: 2px dashed #00ADB5; /* Teal Accent */
+/* --- IMAGE STYLING --- */
+.about-visual {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  align-items: center;
+}
+
+.image-card {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1.2; /* Slightly taller than wide */
+  background-color: #393E46;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 173, 181, 0.3);
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-10px) rotate(2deg); /* Subtle 3D tilt on hover */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures your photo fills the card without stretching */
+  filter: grayscale(20%); /* Optional: gives a moody tech vibe */
+  transition: 0.3s;
+}
+
+.image-card:hover .profile-img {
+  filter: grayscale(0%);
+}
+
+.about-blob {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 173, 181, 0.15) 0%, transparent 70%);
+  z-index: 1;
+}
+
+/* --- TEXT & STATS STYLING --- */
+.about-info h5 {
+  color: #00ADB5;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-info h2 span {
   color: #00ADB5;
 }
 
-/* Text & Headings */
-h2 span {
-  color: #00ADB5; /* Teal Accent for the word "Me" */
-}
-
-p {
+.about-info p {
   color: #b0b0b0;
-  line-height: 1.6;
-  margin: 20px 0;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
-/* The Stats Grid */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 30px;
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .stat-item {
   background-color: #393E46;
   padding: 20px;
-  text-align: center;
   border-radius: 15px;
+  text-align: center;
+  border: 1px solid transparent;
   transition: 0.3s;
+}
+
+.stat-item:hover {
+  border-color: #00ADB5;
+  background-color: #222831;
+  transform: scale(1.05);
 }
 
 .stat-item h3 {
   color: #00ADB5;
-  margin-bottom: 5px;
+  font-size: 1.5rem;
 }
 
-/* Button Styling */
 .about-btn {
-  margin-top: 30px;
-  padding: 10px 25px;
-  background-color: transparent;
-  border: 2px solid #00ADB5;
-  color: #00ADB5;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.about-btn:hover {
   background-color: #00ADB5;
   color: #222831;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 968px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .about-visual {
+    order: -1; /* Keeps image on top on mobile */
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr; /* Stack stats on small phones */
+  }
 }

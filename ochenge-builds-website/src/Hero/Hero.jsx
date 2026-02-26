@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Hero.css';
+import { assets } from '../assets';
 
 const Hero = () => {
   return (
@@ -35,8 +36,8 @@ const Hero = () => {
         {/* RIGHT: 3D VISUAL PLACEHOLDER */}
         <div className="hero-visual">
           <div className="hero-3d-placeholder">
-            {/* Add your <img> here later */}
-            <p>3D Character Placeholder</p>
+            <img src={assets.images.me_3d} alt="3D Character" />
+            
             <div className="hero-blob"></div>
           </div>
         </div>

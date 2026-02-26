@@ -5,11 +5,18 @@
   --accent: #00ADB5;
   --text-main: #EEEEEE;
 }
+* {
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
 
-body {
+html, body {
   background-color: var(--bg-primary);
   color: var(--text-main);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  max-width: 100%;
+  overflow-x: hidden; /* This stops the horizontal sliding */
+  margin: 0;
+  padding: 0;
 }
