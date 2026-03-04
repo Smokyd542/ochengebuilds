@@ -1,14 +1,16 @@
 import React from 'react';
 import './Projects.css';
+import { assets } from '../assets';
+
 
 const Projects = () => {
   // Simple array to manage your project data
   const projectData = [
     {
       id: 1,
-      title: "E-Commerce App",
-      description: "A full-stack shopping platform with 3D product previews.",
-      liveLink: "https://yourwebsite.com/project1"
+      title: "Photographer website",
+      description: "A 3D photographer portfolio platform.",
+      liveLink: "https://smokyd542.github.io/photography/"
     },
     {
       id: 2,
@@ -35,9 +37,9 @@ const Projects = () => {
         {projectData.map((project) => (
           <div key={project.id} className="project-card">
             
-            {/* PROJECT IMAGE PLACEHOLDER: Add your screenshot <img> here later */}
+           
             <div className="project-img-box">
-              <span>Project Screenshot</span>
+               {<img src={assets.images.project_1} alt="Project Screenshot" />}
             </div>
 
             <div className="project-info">
