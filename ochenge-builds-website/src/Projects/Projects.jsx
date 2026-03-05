@@ -14,15 +14,15 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Banking Dashboard",
-      description: "A dark-themed financial tracker with real-time data visualization.",
-      liveLink: "https://yourwebsite.com/project2"
+      title: "Scented candles website",
+      description: "A scented candles e-commerce website built with React and styled-components.",
+      liveLink: "https://beautyscentscandles.co.uk/?srsltid=AfmBOooHpT1nR-HvLFC2zi-xU3yFuHySNWAOzAjas8BOi1JKdAGSnHmW"
     },
     {
       id: 3,
-      title: "Portfolio 3D",
-      description: "An immersive developer portfolio built with React and custom CSS.",
-      liveLink: "https://yourwebsite.com/project3"
+      title: "Landscaping website",
+      description: "A landscaping website built with React and styled-components.",
+      liveLink: "https://www.greenmeadowslandscaping.com/"
     }
   ];
 
