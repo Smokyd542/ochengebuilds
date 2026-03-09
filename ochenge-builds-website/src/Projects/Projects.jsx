@@ -10,7 +10,7 @@ const Projects = () => {
       id: 1,
       title: "Photographer website",
       description: "A 3D photographer portfolio platform.",
-      liveLink: "https://smokyd542.github.io/photography/"
+      liveLink: "https://ochengebuilds.github.io/photography/"
     },
     {
       id: 2,
